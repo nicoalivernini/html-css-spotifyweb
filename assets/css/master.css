@@ -25,6 +25,30 @@ header {
   margin: 10px;
 }
 
+#playlist {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  background-color: #00FFFF;
+  margin: 10px;
+}
+
+.box-cyan {
+  width: 50px;
+  height: 150px;
+  background-color: #00FFFF;
+  margin: 10px;
+}
+
+.box-pink {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
+  margin: 10px;
+}
+
 .box-blue {
   width: 50px;
   height: 50px;
@@ -60,8 +84,6 @@ main {
   margin: 10px;
 }
 
-
-
 /* END PREMIUM XS */
 
 
@@ -71,12 +93,24 @@ main {
   width: calc(100vw - 100px);
   height: calc(100vh - 170px);
   background-color: purple;
+  overflow-y: auto;
+}
+
+#menu-music ul {
   display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.album {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .box-orange {
-  width: 50px;
-  height: 50px;
+  width: 150px;
+  height: 150px;
   background-color: orange;
   margin: 10px;
 }
@@ -87,10 +121,20 @@ main {
 
 /* START FOOTER XS */
 
-footer {
+footer > section{
   width: 100vw;
   height: 100px;
   background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.box-light-green {
+  width: 50px;
+  height: 50px;
+  background-color: #90EE90;
+  margin: 10px;
 }
 
 /* END FOOTER XS */
