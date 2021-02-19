@@ -14,6 +14,23 @@ header {
   width: 100px;
   height: calc(100vh - 100px);
   background-color: red;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-gray {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  margin: 10px;
+}
+
+.box-blue {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  margin: 10px;
+  justify-content: flex-end;
 }
 
 /* END NAVBAR XS */
@@ -26,11 +43,45 @@ main {
   background-color: green;
 }
 
+/* START PREMIUM XS */
+
 #premium {
   width: calc(100vw - 100px);
   height: 70px;
   background-color: gray;
+  display: flex;
+  justify-content: flex-end;
 }
+
+.box-brown {
+  width: 50px;
+  height: 50px;
+  background-color: brown;
+  margin: 10px;
+}
+
+
+
+/* END PREMIUM XS */
+
+
+/* START MUSIC XS */
+
+#music {
+  width: calc(100vw - 100px);
+  height: calc(100vh - 170px);
+  background-color: purple;
+  display: flex;
+}
+
+.box-orange {
+  width: 50px;
+  height: 50px;
+  background-color: orange;
+  margin: 10px;
+}
+
+/* END PREMIUM XS */
 
 /* END MAIN XS */
 
