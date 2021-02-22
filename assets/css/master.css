@@ -18,6 +18,7 @@ header {
   flex-direction: column;
   overflow: hidden;
   padding: 0 10px;
+  position: relative;
 }
 
 main {
@@ -40,6 +41,7 @@ h2 {
   font-size: 20px;
   font-weight: 700;
   padding: 10px 0;
+  margin-bottom: 0;
 }
 
 
@@ -108,7 +110,7 @@ h2 {
 }
 
 .content-playlist {
-  height: 250px;
+  height: 20vh;
   overflow-y: auto;
 }
 
@@ -122,12 +124,17 @@ h2 {
   font-weight: 700;
 }
 
-.box-blue {
-  width: 50px;
-  height: 50px;
-  background-color: blue;
-  margin: 10px;
-  justify-content: flex-end;
+.app-profile {
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  width: 85%;
+}
+
+/* Profile */
+
+.content-profile > img {
+  width: 25%;
 }
 
 /* END NAVBAR XS */
@@ -239,6 +246,26 @@ h2 {
   font-size: 10px;
 }
 
+/* Creato per John Doe */
+
+.text-creato-per > p {
+  color: #b3b3b3;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/* Artisti popolari */
+
+.text-artisti-popolari > p {
+  color: #b3b3b3;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+#artisti-popolari img {
+  border-radius: 100px;
+}
+
 /* END PREMIUM XS */
 
 /* END MAIN XS */
@@ -286,8 +313,11 @@ h2 {
 }
 
 .control-music .fas, .control-music .far {
-  color: #fff;
+  color: #b3b3b3;
   padding: 0 10px;
+}
+.control-music .fas:hover, .control-music .far:hover {
+  color: #fff;
 }
 
 .control-music .fas {
@@ -296,6 +326,19 @@ h2 {
 
 .control-music .far {
   font-size: 20px;
+}
+
+/* Left section */
+
+.control-audio > .fas {
+  color: #b3b3b3;
+  font-size: 15px;
+  padding: 0 7px;
+}
+
+.control-audio > .fas:hover {
+  color: #fff;
+
 }
 
 
