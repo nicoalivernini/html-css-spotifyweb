@@ -125,17 +125,50 @@ h2 {
 }
 
 .app-profile {
-  height: 10vh;
   position: absolute;
   bottom: 0;
   width: 85%;
+  background-color: #000;
+  padding-bottom: 5px;
 }
 
 /* Profile */
 
-.content-profile > img {
-  width: 25%;
+.content-app > hr {
+  margin: 5px 0;
+  border-color: #b3b3b3;
 }
+
+.text-app-sidebar > .far {
+  border-color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text-app-sidebar > span {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text-app-sidebar > span:hover {
+  color: #fff;
+}
+
+.content-profile > img {
+  width: 15%;
+}
+
+.content-profile > span {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.content-profile > span:hover {
+  color: #fff;
+}
+
 
 /* END NAVBAR XS */
 
@@ -160,6 +193,10 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-premium:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .btn-premium > span {
@@ -244,6 +281,7 @@ h2 {
   color: #b3b3b3;
   margin: 0;
   font-size: 10px;
+  padding-bottom: 10px;
 }
 
 /* Creato per John Doe */
@@ -275,8 +313,6 @@ h2 {
 /* Right section */
 
 .content-right-section-footer {
-  display: flex;
-  align-items: center;
 }
 
 .right-section-footer {
@@ -286,15 +322,29 @@ h2 {
 }
 
 .right-section-footer img {
-  width: 50px;
+  width: 35px;
+}
+
+.text-right-section {
+  display: inline-block;
+}
+
+.text-right-section ul {
+  display: inline;
 }
 
 .title-song {
-
+  font-size: 10px;
+  font-weight: 700;
+  color: #b3b3b3;
+  margin: 0;
 }
 
 .author-song {
-
+  font-size: 10px;
+  font-weight: 700;
+  color: #b3b3b3;
+  margin: 0;
 }
 
 
