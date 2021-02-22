@@ -29,7 +29,7 @@ main {
 footer > section{
   width: 100vw;
   height: 100px;
-  background-color: yellow;
+  background-color: rgb(30, 30, 30);
   display: flex;
   justify-content: space-between;
 }
@@ -38,12 +38,17 @@ footer > section{
 
 /* Parte superiore */
 
+.logo-spotify {
+  height: 70px;
+  line-height: 70px;
+}
+
 .logo-spotify > img {
-  width: 100%;
+  width: 90%;
 }
 
 .text-sidebar {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   padding: 5px 0;
 }
 
@@ -59,15 +64,16 @@ footer > section{
   display: inline-block;
   vertical-align: middle;
   margin: 0;
+  padding-left: 5px;
 }
 
 /* Playlist */
 
 #playlist {
-  height: 150px;
-  overflow-y: auto;
-  background-color: #00FFFF;
-  margin: 10px 0;
+  height: 300px;
+  overflow: hidden;
+  /* background-color: #00FFFF; */
+  margin: 15px 0;
 }
 
 .title-playlist > h3 {
@@ -78,7 +84,7 @@ footer > section{
 }
 
 .text-playlist {
-  padding: 5px 0;
+  padding: 10px 0;
 }
 
 .text-playlist > img {
@@ -86,19 +92,25 @@ footer > section{
   vertical-align: middle;
 }
 
-
-.box-cyan {
-  width: 50px;
-  height: 150px;
-  background-color: #00FFFF;
-  margin: 10px;
+.text-playlist > span {
+  font-size: 12px;
+  color: #b3b3b3;
+  font-weight: 700;
 }
 
-.box-pink {
-  width: 50px;
-  height: 50px;
-  background-color: pink;
-  margin: 10px;
+.content-playlist {
+  height: 250px;
+  overflow-y: auto;
+}
+
+.name-playlist {
+  margin-bottom: 10px;
+}
+
+.name-playlist > p {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .box-blue {
@@ -116,16 +128,28 @@ footer > section{
 #premium {
   width: calc(100vw - 150px);
   height: 70px;
-  background-color: gray;
+  background-color: rgb(9, 11, 15);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  position: fixed;
 }
 
-.box-brown {
-  width: 50px;
-  height: 50px;
-  background-color: brown;
-  margin: 10px;
+.btn-premium {
+  width: 180px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-premium > span {
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 /* END PREMIUM XS */
@@ -135,9 +159,10 @@ footer > section{
 
 #music {
   width: calc(100vw - 150px);
-  height: calc(100vh - 170px);
-  background-color: purple;
+  height: calc(100vh - 100px);
+  background-color: rgb(16, 19, 25);
   overflow-y: auto;
+  padding-top: 70px;
 }
 
 /* Menù music */
@@ -146,6 +171,28 @@ footer > section{
   display: flex;
   list-style: none;
   justify-content: center;
+}
+
+#menu-music ul li {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 10px 5px;
+  font-weight: 700;
+}
+
+#menu-music ul li hr {
+  border-top: 2px solid rgb(16, 19, 25);
+  margin: 0 auto;
+}
+
+#menu-music ul li:hover hr{
+  display: block;
+  text-align: center;
+  width: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-top: 2px solid green;
 }
 
 /* Recently played */
