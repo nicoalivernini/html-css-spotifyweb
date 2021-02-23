@@ -88,6 +88,14 @@ aside {
   border-left: 2px solid rgb(164, 255, 37);
 }
 
+.menu-sidebar > .text-sidebar > svg.active {
+  color: #fff;
+}
+
+.menu-sidebar > .text-sidebar > p.active {
+  color: #fff;
+}
+
 .text-sidebar > svg {
   vertical-align: middle;
   color: #b3b3b3;
@@ -280,7 +288,12 @@ aside {
   margin: 0 auto;
 }
 
-#menu-music ul li:hover hr{
+#menu-music ul li:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+#menu-music > .content-music > ul > li > hr.active {
   display: block;
   text-align: center;
   width: 20px;
@@ -288,6 +301,20 @@ aside {
   border-radius: 5px;
   border-top: 2px solid green;
 }
+
+#menu-music ul li:first-child {
+  color: #fff;
+}
+
+ #menu-music ul li:active hr {
+  display: block;
+  text-align: center;
+  width: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border-top: 2px solid green;
+}
+
 
 /* Recently played */
 
@@ -431,10 +458,6 @@ aside {
   justify-content: ;
 }
 
-.right-section-footer {
-  width: 170px;
-}
-
 .right-section-footer img {
   width: 30px;
 }
@@ -446,12 +469,12 @@ aside {
 .title-song {
   font-size: 10px;
   font-weight: 700;
-  color: #b3b3b3;
+  color: #fff;
   margin: 0;
 }
 
 .author-song {
-  font-size: 8px;
+  font-size: 7px;
   font-weight: 700;
   color: #b3b3b3;
   margin: 0;
@@ -524,7 +547,7 @@ aside {
   font-size: 10px;
 }
 
-.progress {
+.central-progress {
   height: 5px;
   width: 55%;
   background-color: rgb(72, 72, 72);
@@ -539,6 +562,12 @@ aside {
 .progress:hover .my-progress-bar {
   background-color: rgb(164, 255, 37);
   cursor: pointer;
+}
+
+.point {
+  height: 5px;
+  width: 5px;
+  background-color: red;
 }
 
 /* Left section */
@@ -576,7 +605,7 @@ aside {
 
 /* ----- MEDIA SM ----- */
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 576px) {
 
 /* Layout */
 
@@ -716,7 +745,7 @@ main {
 /* Recently played */
 
 .content-album {
-  width: calc(100%/4 - 10px);
+  width: calc(100%/2 - 10px);
   margin: 5px;
   text-align: center;
 }
@@ -725,13 +754,13 @@ main {
 
 .progress {
   height: 5px;
-  width: 160px;
+  width: 120px;
   background-color: rgb(72, 72, 72);
   margin: 15px 10px;
 }
 
 .icon-right-section > .far {
-  display: inline-block;
+  display: block;
 }
 
 .left-progress {
@@ -744,8 +773,35 @@ main {
 
 }
 
-
 /* ----- MEDIA MD ----- */
+
+@media all and (min-width: 768px){
+
+
+/* Music */
+
+/* Recently played */
+.content-album {
+  width: calc(100%/4 - 10px);
+  margin: 5px;
+  text-align: center;
+  }
+
+  /* Footer */
+.central-progress {
+  height: 5px;
+  width: 220px;
+  background-color: rgb(72, 72, 72);
+  margin: 15px 10px;
+}
+
+.icon-right-section > .far {
+  display: inline-block;
+}
+
+}
+
+/* ----- MEDIA LG ----- */
 
 @media all and (min-width: 992px) {
 
@@ -762,7 +818,7 @@ main {
 
 /* Footer */
 
-.progress {
+.central-progress {
   height: 5px;
   width: 330px;
   background-color: rgb(72, 72, 72);

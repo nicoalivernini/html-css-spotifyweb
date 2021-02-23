@@ -22,8 +22,8 @@
               <img class="logo-mobile" src="assets/img/logo-simbolo.png" alt="Logo Spotify">
             </div>
             <div class="text-sidebar text-sidebar-active">
-              <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
-              <p>Home</p>
+              <svg class="active" viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
+              <p class="active">Home</p>
             </div>
             <div class="text-sidebar">
               <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -86,7 +86,7 @@
           <section id="menu-music">
             <div class="content-music">
               <ul>
-                <li>in evidenza <hr></li>
+                <li>in evidenza <hr class="active"></li>
                 <li>podcast <hr></li>
                 <li>classifiche <hr></li>
                 <li>generi e mood <hr></li>
@@ -252,7 +252,7 @@
             <div class="number-progress">
               <span>0:25</span>
             </div>
-            <div class="progress">
+            <div class="progress central-progress">
               <div class="progress-bar my-progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div class="number-progress">
@@ -269,10 +269,67 @@
             <div class="progress left-progress">
               <div class="progress-bar my-progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            </div>
           </div>
         </div>
       </section>
+
+      <!-- Prova colonne -->
+      <!-- <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="right-section-footer">
+                <div class="content-right-section-footer">
+                  <img src="assets/img/sinister.jpg" alt="">
+                  <div class="text-right-section">
+                      <h4 class="title-song">Sinister</h4>
+                      <p class="author-song">Christopher</p>
+                  </div>
+                  <div class="icon-right-section">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-folder"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="central-section-footer">
+                <div class="control-music">
+                  <i class="fas fa-random"></i>
+                  <i class="fas fa-step-backward"></i>
+                  <i class="far fa-play-circle"></i>
+                  <i class="fas fa-step-forward"></i>
+                  <i class="fas fa-redo-alt"></i>
+                </div>
+
+                <div class="music-bar">
+                  <div class="number-progress">
+                    <span>0:25</span>
+                  </div>
+                  <div class="progress central-progress">
+                    <div class="progress-bar my-progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="number-progress">
+                    <span>4:35</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4">
+              <div class="left-section-footer">
+                <div class="control-audio">
+                  <i class="fas fa-list"></i>
+                  <i class="fas fa-desktop"></i>
+                  <i class="fas fa-volume-up"></i>
+                  <div class="progress left-progress">
+                    <div class="progress-bar my-progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
     </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
