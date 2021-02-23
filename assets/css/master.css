@@ -59,21 +59,27 @@ aside {
 /* Parte superiore */
 
 .logo-spotify {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   height: 70px;
-  line-height: 70px;
 }
 
 .logo-spotify > img {
   width: 90%;
 }
 
+.logo-desktop {
+  display: none;
+}
+
 .text-sidebar {
-  /* border: 1px solid white; */
+  text-align: center;
   padding: 5px 0;
 }
 
 .text-sidebar > img {
-  width: 15%;
+  width: 60%;
   vertical-align: middle;
 }
 
@@ -81,20 +87,16 @@ aside {
   font-size: 10px;
   font-weight: 700;
   color: #b3b3b3;
-  display: inline-block;
   vertical-align: middle;
   margin: 0;
   padding-left: 5px;
-  /* display: none; */
+  display: none;
 }
 
 /* Playlist */
 
 #playlist {
-  height: 200px;
-  overflow: hidden;
-  margin: 15px 0;
-  /* display: none; */
+  display: none;
 }
 
 .title-playlist > h3 {
@@ -141,39 +143,36 @@ aside {
 /* Profile */
 
 .content-app > hr {
-  margin: 5px 0;
-  border-color: #b3b3b3;
+  display: none;
+}
+
+.text-app-sidebar {
+  text-align: center;
 }
 
 .text-app-sidebar > .far {
-  border-color: #b3b3b3;
+  color: #b3b3b3;
   font-size: 12px;
   font-weight: 700;
 }
 
 .text-app-sidebar > span {
-  color: #b3b3b3;
-  font-size: 12px;
-  font-weight: 700;
+  display: none;
 }
 
-.text-app-sidebar > span:hover {
-  color: #fff;
+.content-profile {
+  text-align: center;
 }
 
 .content-profile > img {
-  width: 15%;
+  width: 70%;
+  padding-top: 15px;
 }
 
 .content-profile > span {
-  color: #b3b3b3;
-  font-size: 12px;
-  font-weight: 700;
+  display: none;
 }
 
-.content-profile > span:hover {
-  color: #fff;
-}
 
 
 /* END NAVBAR XS */
@@ -399,6 +398,7 @@ aside {
 .content-right-section-footer {
   display: flex;
   align-items: center;
+  justify-content: ;
 }
 
 .right-section-footer {
@@ -548,6 +548,92 @@ main {
   height: calc(100vh - 100px);
   background-color: green;
 }
+
+/* Sidebar */
+
+/* Logo sidebar */
+
+.logo-desktop {
+  display: block;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+/* Text sidebar */
+
+.text-sidebar > p {
+  font-size: 10px;
+  font-weight: 700;
+  color: #b3b3b3;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding-left: 5px;
+}
+
+.text-sidebar {
+  text-align: left;
+  padding: 5px 0;
+}
+
+.text-sidebar > img {
+  width: 15%;
+  vertical-align: middle;
+}
+
+/* Playlist */
+
+#playlist {
+  height: 200px;
+  overflow: hidden;
+  margin: 15px 0;
+  display: block;
+}
+
+/* Parte inferiore playlist */
+
+.text-app-sidebar {
+  text-align: left;
+}
+
+.text-app-sidebar > span {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-weight: 700;
+  padding-left: 5px;
+  display: inline;
+}
+
+.text-app-sidebar > span:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+.content-app > hr {
+  margin: 7px 0;
+  border-color: #b3b3b3;
+  display: block;
+}
+
+.content-profile {
+  text-align: left;
+}
+
+.content-profile > img {
+  width: 13%;
+  padding-top: 0px;
+}
+
+.content-profile > span {
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding-left: 5px;
+  display: inline;
+}
+
 
 /* Premium */
 
