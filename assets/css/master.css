@@ -190,6 +190,7 @@ aside {
   align-items: center;
   opacity: 0.8;
   position: fixed;
+  z-index: 1;
 }
 
 .btn-premium {
@@ -474,6 +475,16 @@ aside {
 
 }
 
+/* Progress bar */
+.progress {
+  height: 5px;
+}
+
+.my-progress-bar {
+  width: 25%;
+  
+}
+
 
 /* END FOOTER XS */
 
@@ -513,6 +524,7 @@ main {
   align-items: center;
   opacity: 0.8;
   position: fixed;
+  z-index: 1;
 }
 
 /* Music */
