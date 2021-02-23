@@ -11,18 +11,17 @@
 /* LAYOUT */
 
 header {
-  width: 150px;
+  width: 50px;
   height: calc(100vh - 100px);
   background-color: #000000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: 0 10px;
-  position: relative;
 }
 
 main {
-  width: calc(100vw - 150px);
+  width: calc(100vw - 50px);
   height: calc(100vh - 100px);
   background-color: green;
 }
@@ -32,8 +31,12 @@ footer > section{
   height: 100px;
   background-color: rgb(30, 30, 30);
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
 }
 
 h2 {
@@ -46,6 +49,12 @@ h2 {
 
 
 /* START NAVBAR XS */
+
+aside {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
 
 /* Parte superiore */
 
@@ -76,15 +85,16 @@ h2 {
   vertical-align: middle;
   margin: 0;
   padding-left: 5px;
+  /* display: none; */
 }
 
 /* Playlist */
 
 #playlist {
-  height: 300px;
+  height: 200px;
   overflow: hidden;
-  /* background-color: #00FFFF; */
   margin: 15px 0;
+  /* display: none; */
 }
 
 .title-playlist > h3 {
@@ -110,26 +120,22 @@ h2 {
 }
 
 .content-playlist {
-  height: 20vh;
+  height: 25vh;
   overflow-y: auto;
 }
 
-.name-playlist {
-  margin-bottom: 10px;
-}
-
-.name-playlist > p {
+.name-playlist > li {
   color: #b3b3b3;
   font-size: 10px;
   font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .app-profile {
-  position: absolute;
-  bottom: 0;
-  width: 85%;
+  width: 100%;
   background-color: #000;
   padding-bottom: 5px;
+  margin-top: auto;
 }
 
 /* Profile */
@@ -175,10 +181,11 @@ h2 {
 /* START PREMIUM XS */
 
 #premium {
-  width: calc(100vw - 150px);
+  width: calc(100vw - 50px);
   height: 70px;
   background-color: rgb(9, 11, 15);
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   opacity: 0.8;
@@ -212,10 +219,12 @@ h2 {
 /* START MUSIC XS */
 
 #music {
-  width: calc(100vw - 150px);
+  width: calc(100vw - 50px);
   height: calc(100vh - 100px);
   background-color: rgb(16, 19, 25);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
   padding-top: 70px;
   padding-right: 15px;
   padding-left: 15px;
@@ -227,6 +236,7 @@ h2 {
   display: flex;
   list-style: none;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 #menu-music ul li {
@@ -253,6 +263,10 @@ h2 {
 
 /* Recently played */
 
+.text-recently {
+  margin: 5px;
+}
+
 .album {
   display: flex;
   flex-direction: row;
@@ -260,12 +274,12 @@ h2 {
 }
 
 .content-album {
-  width: 150px;
-  margin-right: 10px;
+  width: calc(100%/2 - 10px);
+  margin: 5px;
   text-align: center;
 }
 
-.content-album img {
+.img-album img {
   width: 100%;
 }
 
@@ -284,7 +298,72 @@ h2 {
   padding-bottom: 10px;
 }
 
+.img-album {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.img-album:hover .overlay{
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.overlay > .far {
+  color: #fff;
+  opacity: 1;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-tondo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  border-radius: 100px;
+}
+
+.img-album:hover .overlay-tondo{
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.overlay-tondo > .far {
+  color: #fff;
+  opacity: 1;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
 /* Creato per John Doe */
+
+.text-creato-per {
+  margin: 5px;
+}
 
 .text-creato-per > p {
   color: #b3b3b3;
@@ -293,6 +372,10 @@ h2 {
 }
 
 /* Artisti popolari */
+
+.text-artisti-popolari {
+  margin: 5px;
+}
 
 .text-artisti-popolari > p {
   color: #b3b3b3;
@@ -393,3 +476,83 @@ h2 {
 
 
 /* END FOOTER XS */
+
+
+
+/* ----- MEDIA SM ----- */
+
+@media all and (min-width: 768px) {
+
+/* Layout */
+
+header {
+  width: 150px;
+  height: calc(100vh - 100px);
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+main {
+  width: calc(100vw - 150px);
+  height: calc(100vh - 100px);
+  background-color: green;
+}
+
+/* Premium */
+
+#premium {
+  width: calc(100vw - 150px);
+  height: 70px;
+  background-color: rgb(9, 11, 15);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0.8;
+  position: fixed;
+}
+
+/* Music */
+
+#music {
+  width: calc(100vw - 150px);
+  height: calc(100vh - 100px);
+  background-color: rgb(16, 19, 25);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Recently played */
+
+.content-album {
+  width: calc(100%/4 - 10px);
+  margin: 5px;
+  text-align: center;
+}
+
+
+}
+
+
+/* ----- MEDIA MD ----- */
+
+@media all and (min-width: 992px) {
+
+
+/* Music */
+
+/* Recently played */
+
+.content-album {
+  width: calc(100%/6 - 10px);
+  margin: 5px;
+  text-align: center;
+}
+}
