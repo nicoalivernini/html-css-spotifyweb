@@ -37,7 +37,7 @@ footer {
   position: fixed;
   bottom: 0;
   z-index: 1;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 h2 {
@@ -48,7 +48,6 @@ h2 {
   margin-bottom: 0;
 }
 
-
 /* START NAVBAR XS */
 
 aside {
@@ -57,7 +56,7 @@ aside {
   flex-direction: column;
 }
 
-/* Parte superiore */
+/* NAVBAR XS - Parte superiore */
 
 .logo-spotify {
   display: flex;
@@ -90,7 +89,6 @@ aside {
   padding-left: 10px;
 }
 
-
 .menu-sidebar > .text-sidebar > svg.active {
   color: #fff;
 }
@@ -114,7 +112,7 @@ aside {
   display: none;
 }
 
-/* Playlist */
+/* NAVBAR XS - Playlist */
 
 #playlist {
   display: none;
@@ -166,7 +164,7 @@ aside {
   margin-top: auto;
 }
 
-/* Profile */
+/* NAVBAR XS - Profile */
 
 .content-app > hr {
   display: none;
@@ -198,8 +196,6 @@ aside {
 .content-profile > span {
   display: none;
 }
-
-
 
 /* END NAVBAR XS */
 
@@ -258,7 +254,7 @@ aside {
   padding-left: 15px;
 }
 
-/* Menù music */
+/* MUSIC XS - Menù */
 
 #menu-music ul {
   display: flex;
@@ -311,8 +307,7 @@ aside {
   border-top: 2px solid green;
 }
 
-
-/* Recently played */
+/* MUSIC XS - Recently played */
 
 .text-recently {
   margin: 5px;
@@ -409,11 +404,7 @@ aside {
   transform: translate(-50%, -50%);
 }
 
-
-
-
-
-/* Creato per John Doe */
+/* MUSIC XS - Creato per John Doe */
 
 .text-creato-per {
   margin: 5px;
@@ -426,7 +417,7 @@ aside {
   font-weight: 700;
 }
 
-/* Artisti popolari */
+/* MUSIC XS - Artisti popolari */
 
 .text-artisti-popolari {
   margin: 5px;
@@ -445,15 +436,13 @@ aside {
 
 /* END PREMIUM XS */
 
-/* END MAIN XS */
-
 /* START FOOTER XS */
 
-/* left section */
+/* FOOTER XS - Left section */
 
 .left-section-footer {
   display: flex;
-  flex: 1 0 100px;
+  flex: 1 0 50px;
   width: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -515,7 +504,7 @@ aside {
   cursor: pointer;
 }
 
-/* Central section */
+/* FOOTER XS - Central section */
 
 .central-section-footer {
   display: flex;
@@ -555,7 +544,7 @@ aside {
 }
 
 .control-music .far {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .control-music .far:hover {
@@ -574,11 +563,17 @@ aside {
   width: 50%;
   background-color: rgb(72, 72, 72);
   margin: 15px 10px;
+  position: relative;
 }
 
 .my-progress-bar {
   width: 25%;
   background-color: rgb(180, 180, 180);
+  position: relative;
+}
+
+.progress {
+  overflow: visible;
 }
 
 .progress:hover .my-progress-bar {
@@ -586,91 +581,26 @@ aside {
   cursor: pointer;
 }
 
-.point {
-  height: 5px;
-  width: 5px;
-  background-color: red;
+.white-ball {
+  display: none;
 }
 
-/* PROVA PROGRESS BAR */
-
-.prova-progress {
-  width: 50%;
-}
-
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: rgb(72, 72, 72); /* Otherwise white in Chrome */
-  height: 5px;
-  border-radius: 5px;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-
-
-/* Special styling for WebKit/Blink */
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: 1px solid #fff;
-  height: 16px;
-  width: 16px;
+.progress:hover .white-ball {
+  height: 15px;
+  width: 15px;
   border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
-  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  background-color: white;
+  position: absolute;
+  left: 25%;
+  top: -5px;
+  display: block;
 }
-
-/* All the same stuff for Firefox */
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #fff;
-  height: 16px;
-  width: 16px;
-  border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-/* All the same stuff for IE */
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #fff;
-  height: 16px;
-  width: 16px;
-  border-radius: 15px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-
-
-
-
-/* PROVA PROGRESS BAR */
 
 /* Right section */
 
 .right-section-footer {
   display: flex;
-  flex: 1 0 100px;
+  flex: 1 0 50px;
   align-items: center;
   justify-content: flex-end;
   width: 100%;
@@ -864,11 +794,41 @@ main {
   display: block;
 }
 
+/* Right section */
+
+.right-section-footer {
+  display: flex;
+  flex: 1 0 100px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .right-progress {
   height: 5px;
   width: 100px;
   background-color: rgb(72, 72, 72);
   margin: 15px 0;
+  position: relative;
+}
+
+/* Left section */
+
+.left-section-footer {
+  display: flex;
+  flex: 1 0 100px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.left-section-footer img {
+  width: 40px;
+}
+
+.text-left-section {
+  padding: 0px 10px;
+  display: inline;
 }
 
 .title-song {
@@ -903,10 +863,7 @@ main {
 
 /* Left section */
 
-.text-left-section {
-  padding: 0px 10px;
-  display: inline;
-}
+
 
 /* Right section */
 
