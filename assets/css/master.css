@@ -143,7 +143,7 @@ aside {
 }
 
 .content-playlist {
-  height: 25vh;
+  height: 30vh;
   overflow-y: auto;
 }
 
@@ -594,58 +594,74 @@ aside {
 
 /* PROVA PROGRESS BAR */
 
-input[type='range'] {
-  overflow: hidden;
+.prova-progress {
+  width: 50%;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: rgb(72, 72, 72); /* Otherwise white in Chrome */
+  height: 5px;
+  border-radius: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
   width: 100%;
-  -webkit-appearance: none;
-  background-color: rgb(72, 72, 72);
-  /* margin: 10px 0; */
-}
-
-input[type='range']::-webkit-slider-runnable-track {
-  height: 15px;
-  -webkit-appearance: none;
-  color: red;
-  margin-top: -1px;
-}
-
-input[type='range']::-webkit-slider-thumb {
-  box-shadow: -80px 0 0 80px rgb(180, 180, 180);
-}
-
-input[type='range']:hover::-webkit-slider-thumb {
-
-  -webkit-appearance: none;
-
-  /* cursor: ew-resize; */
-  background: #fff ;
-  box-shadow: -80px 0 0 80px rgb(164, 255, 37);
-
-
-  border: 1px solid #00001E;
-  height: 26px;
-  width: 26px;
-  border-radius: 15px;
-
   cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -8px;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
 }
 
-/** FF*/
-/* input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7;
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
-input[type="range"]::-moz-range-track {
-  background-color: #9a905d;
-} */
-/* IE*/
-/* input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7;
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
 }
-input[type="range"]::-ms-fill-upper {
-  background-color: #9a905d;
-} */
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 15px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+
 
 
 /* PROVA PROGRESS BAR */
@@ -749,7 +765,7 @@ main {
 /* Playlist */
 
 #playlist {
-  height: 200px;
+  height: 250px;
   overflow: hidden;
   margin: 15px 0;
   display: block;
@@ -855,6 +871,13 @@ main {
   margin: 15px 0;
 }
 
+.title-song {
+  font-size: 12px;
+}
+
+.author-song {
+  font-size: 10px;
+}
 
 }
 
