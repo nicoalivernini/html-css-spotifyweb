@@ -8,7 +8,7 @@
   display: flex;
 }
 
-/* LAYOUT */
+/* LAYOUT XS */
 
 header {
   width: 50px;
@@ -304,7 +304,7 @@ aside {
   width: 20px;
   margin: 0 auto;
   border-radius: 5px;
-  border-top: 2px solid green;
+  border-top: 2px solid rgb(164, 255, 37);
 }
 
 /* MUSIC XS - Recently played */
@@ -434,7 +434,6 @@ aside {
   border-radius: 100px;
 }
 
-/* END PREMIUM XS */
 
 /* START FOOTER XS */
 
@@ -551,7 +550,7 @@ aside {
   transform: scale(1.1);
 }
 
-/* Progress bar */
+/* FOOTER XS - Progress bar */
 
 .number-progress {
   color: rgb(180, 180, 180);
@@ -570,6 +569,7 @@ aside {
   width: 25%;
   background-color: rgb(180, 180, 180);
   position: relative;
+  border-radius: 10px;
 }
 
 .progress {
@@ -594,9 +594,10 @@ aside {
   left: 25%;
   top: -5px;
   display: block;
+  cursor: pointer;
 }
 
-/* Right section */
+/* FOOTER XS - Right section */
 
 .right-section-footer {
   display: flex;
@@ -627,18 +628,13 @@ aside {
   display: none;
 }
 
-
-
-
 /* END FOOTER XS */
-
-
 
 /* ----- MEDIA SM ----- */
 
 @media all and (min-width: 576px) {
 
-/* Layout */
+/* LAYOUT SM */
 
 header {
   width: 170px;
@@ -656,9 +652,9 @@ main {
   background-color: green;
 }
 
-/* Sidebar */
+/* SIDEBAR SM */
 
-/* Logo sidebar */
+/* SIDEBAR SM - Logo */
 
 .logo-desktop {
   display: block;
@@ -668,7 +664,7 @@ main {
   display: none;
 }
 
-/* Text sidebar */
+/* SIDEBAR SM - Text  */
 
 .text-sidebar > p {
   font-size: 12px;
@@ -682,7 +678,6 @@ main {
 
 .text-sidebar {
   text-align: left;
-  /* padding: 5px 0; */
   display: flex;
   align-items: center;
 }
@@ -692,7 +687,7 @@ main {
   vertical-align: middle;
 }
 
-/* Playlist */
+/* SIDEBAR SM - Playlist */
 
 #playlist {
   height: 250px;
@@ -706,9 +701,10 @@ main {
   color: #fff;
   text-transform: uppercase;
   margin: 0;
+  font-weight: 700;
 }
 
-/* Parte inferiore playlist */
+/* SIDEBAR SM - Parte inferiore playlist */
 
 .text-app-sidebar {
   text-align: left;
@@ -750,8 +746,7 @@ main {
   display: inline;
 }
 
-
-/* Premium */
+/* START PREMIUM SM */
 
 #premium {
   width: calc(100vw - 170px);
@@ -766,7 +761,7 @@ main {
   z-index: 1;
 }
 
-/* Music */
+/* PREMIUM SM - Music */
 
 #music {
   width: calc(100vw - 170px);
@@ -780,7 +775,7 @@ main {
   padding-left: 15px;
 }
 
-/* Recently played */
+/* PREMIUM SM - Recently played */
 
 .content-album {
   width: calc(100%/2 - 10px);
@@ -788,31 +783,13 @@ main {
   text-align: center;
 }
 
-/* Footer */
+/* FOOTER SM */
 
 .icon-left-section > .far {
   display: block;
 }
 
-/* Right section */
-
-.right-section-footer {
-  display: flex;
-  flex: 1 0 100px;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.right-progress {
-  height: 5px;
-  width: 100px;
-  background-color: rgb(72, 72, 72);
-  margin: 15px 0;
-  position: relative;
-}
-
-/* Left section */
+/* FOOTER SM - Left section */
 
 .left-section-footer {
   display: flex;
@@ -839,16 +816,35 @@ main {
   font-size: 10px;
 }
 
+/* FOOTER SM - Right section */
+
+.right-section-footer {
+  display: flex;
+  flex: 1 0 100px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.right-progress {
+  height: 5px;
+  width: 100px;
+  background-color: rgb(72, 72, 72);
+  margin: 15px 0;
+  position: relative;
+  display: inline;
+}
+
 }
 
 /* ----- MEDIA MD ----- */
 
 @media all and (min-width: 768px){
 
+/* MUSIC MD */
 
-/* Music */
+/* MUSIC MD - Recently played */
 
-/* Recently played */
 .content-album {
   width: calc(100%/4 - 10px);
   margin: 5px;
@@ -858,48 +854,20 @@ main {
 .icon-left-section > .far {
   display: inline-block;
 }
-
-/* Footer */
-
-/* Left section */
-
-
-
-/* Right section */
-
-.right-progress {
-  height: 5px;
-  width: 100px;
-  background-color: rgb(72, 72, 72);
-  margin: 15px 0;
-  display: inline;
-}
-
 }
 
 /* ----- MEDIA LG ----- */
 
 @media all and (min-width: 992px) {
 
+/* MUSIC LG */
 
-/* Music */
-
-/* Recently played */
+/* MUSIC LG - Recently played */
 
 .content-album {
   width: calc(100%/6 - 10px);
   margin: 5px;
   text-align: center;
-}
-
-/* Footer */
-
-
-.right-progress {
-  height: 5px;
-  width: 100px;
-  background-color: rgb(72, 72, 72);
-  margin: 15px 0;
 }
 
 }
