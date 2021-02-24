@@ -180,6 +180,10 @@ aside {
   font-weight: 700;
 }
 
+.text-app-sidebar > .far:hover {
+  color: #fff;
+}
+
 .text-app-sidebar > span {
   display: none;
 }
